@@ -7,7 +7,6 @@ import 'package:helpers_vz/models/figure_measurement.dart';
 class MathSquareRepository {
   static const List<int> smallNumbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   static const List<int> roundNumbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500];
-  static const List<int> _roundFactors = [2, 3, 4, 5, 6, 7, 8, 9];
   static const List<int> _roundSquareSides = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300];
   static const List<int> _roundHeights = [10, 20, 30, 40, 50, 60, 70, 80, 90];
   static const List<int> _trapezoidMidlines = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -238,7 +237,8 @@ class MathSquareRepository {
 
   (int, int) _easyPair({bool isEvenProductRequired = false, bool isDistinctRequired = false}) {
     while (true) {
-      final (first, second) = _random.nextInt(10) < 7 ? (_pick(smallNumbers), _pick(smallNumbers)) : _roundPair();
+      final first = _easyNumber();
+      final second = _easyNumber();
       final isEvenEnough = !isEvenProductRequired || (first * second).isEven;
       final isDistinctEnough = !isDistinctRequired || first != second;
       if (isEvenEnough && isDistinctEnough) {
@@ -247,12 +247,7 @@ class MathSquareRepository {
     }
   }
 
-  (int, int) _roundPair() {
-    final factor = _pick(_roundFactors);
-    final round = _pick(roundNumbers);
-
-    return _random.nextBool() ? (factor, round) : (round, factor);
-  }
+  int _easyNumber() => _random.nextInt(10) < 8 ? _pick(smallNumbers) : _pick(roundNumbers);
 
   double _ratio(int value, int reference, double lowest, double highest) =>
       (value / reference).clamp(lowest, highest).toDouble();

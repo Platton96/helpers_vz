@@ -69,15 +69,6 @@ void main() {
     }
   });
 
-  test('never multiplies two round numbers together', () {
-    for (final question in allQuestions.where((question) => question.figure != .trapezoid)) {
-      final roundValues = valuesOf(question).where((value) => value >= 20 && value % 10 == 0);
-      if (question.figure != .square) {
-        expect(roundValues.length, lessThan(2), reason: '$question');
-      }
-    }
-  });
-
   test('a rectangle has a different length and width', () {
     for (final question in allQuestions.where((question) => question.figure == .rectangle)) {
       final values = valuesOf(question);
