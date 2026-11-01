@@ -2,5 +2,80 @@
   "@@locale": "ru",
   "appTitle": "Helpers VZ",
   "homeTitle": "Helpers VZ",
-  "homeSubtitle": "Каркас приложения готов"
+  "homeSubtitle": "Каркас приложения готов",
+  "homeMathSquareButton": "Площадь фигур",
+  "mathSquareTitle": "Площадь фигуры",
+  "mathSquareShowAnswer": "Показать ответ",
+  "mathSquareNextQuestion": "Следующий вопрос",
+  "mathSquareAnswer": "Ответ: {answer}",
+  "@mathSquareAnswer": {
+    "placeholders": {
+      "answer": {
+        "type": "int"
+      }
+    }
+  },
+  "squareQuestion": "Найдите площадь квадрата",
+  "rectangleQuestion": "Найдите площадь прямоугольника",
+  "parallelogramQuestion": "Найдите площадь параллелограмма",
+  "triangleQuestion": "Найдите площадь треугольника",
+  "rightTriangleQuestion": "Найдите площадь прямоугольного треугольника",
+  "rhombusQuestion": "Найдите площадь ромба",
+  "trapezoidQuestion": "Найдите площадь трапеции",
+  "sideMeasurement": "Сторона — {value}",
+  "@sideMeasurement": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "lengthMeasurement": "Длина — {value}",
+  "@lengthMeasurement": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "widthMeasurement": "Ширина — {value}",
+  "@widthMeasurement": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "baseMeasurement": "Основание — {value}",
+  "@baseMeasurement": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "heightMeasurement": "Высота — {value}",
+  "@heightMeasurement": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "legMeasurement": "Катет — {value}",
+  "@legMeasurement": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "diagonalMeasurement": "Диагональ — {value}",
+  "@diagonalMeasurement": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  }
 }

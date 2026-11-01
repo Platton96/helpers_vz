@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:helpers_vz/ui/home/home_screen.dart';
+import 'package:helpers_vz/ui/math_square/math_square_screen.dart';
 
 import '../../helpers/test_app.dart';
 
@@ -20,5 +21,14 @@ void main() {
     await pumpTestApp(tester, const HomeScreen(), size: phoneSize, locale: const Locale('en'));
 
     expect(find.text(englishStrings.homeSubtitle), findsOneWidget);
+  });
+
+  testWidgets('opens the area screen from the home button', (tester) async {
+    await pumpTestApp(tester, const HomeScreen(), size: phoneSize);
+
+    await tester.tap(find.text(russianStrings.homeMathSquareButton));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(MathSquareScreen), findsOneWidget);
   });
 }

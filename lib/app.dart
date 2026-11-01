@@ -11,6 +11,7 @@ class HelpersApp extends StatelessWidget {
         onGenerateTitle: (context) => AppStrings.of(context).appTitle,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.dark,
+        locale: const Locale('ru'),
         localizationsDelegates: AppStrings.localizationsDelegates,
         supportedLocales: AppStrings.supportedLocales,
         home: const HomeScreen(),

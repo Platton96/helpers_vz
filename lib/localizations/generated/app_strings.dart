@@ -115,6 +115,120 @@ abstract class AppStrings {
   /// In ru, this message translates to:
   /// **'Каркас приложения готов'**
   String get homeSubtitle;
+
+  /// No description provided for @homeMathSquareButton.
+  ///
+  /// In ru, this message translates to:
+  /// **'Площадь фигур'**
+  String get homeMathSquareButton;
+
+  /// No description provided for @mathSquareTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Площадь фигуры'**
+  String get mathSquareTitle;
+
+  /// No description provided for @mathSquareShowAnswer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Показать ответ'**
+  String get mathSquareShowAnswer;
+
+  /// No description provided for @mathSquareNextQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Следующий вопрос'**
+  String get mathSquareNextQuestion;
+
+  /// No description provided for @mathSquareAnswer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ответ: {answer}'**
+  String mathSquareAnswer(int answer);
+
+  /// No description provided for @squareQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите площадь квадрата'**
+  String get squareQuestion;
+
+  /// No description provided for @rectangleQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите площадь прямоугольника'**
+  String get rectangleQuestion;
+
+  /// No description provided for @parallelogramQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите площадь параллелограмма'**
+  String get parallelogramQuestion;
+
+  /// No description provided for @triangleQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите площадь треугольника'**
+  String get triangleQuestion;
+
+  /// No description provided for @rightTriangleQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите площадь прямоугольного треугольника'**
+  String get rightTriangleQuestion;
+
+  /// No description provided for @rhombusQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите площадь ромба'**
+  String get rhombusQuestion;
+
+  /// No description provided for @trapezoidQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите площадь трапеции'**
+  String get trapezoidQuestion;
+
+  /// No description provided for @sideMeasurement.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сторона — {value}'**
+  String sideMeasurement(int value);
+
+  /// No description provided for @lengthMeasurement.
+  ///
+  /// In ru, this message translates to:
+  /// **'Длина — {value}'**
+  String lengthMeasurement(int value);
+
+  /// No description provided for @widthMeasurement.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ширина — {value}'**
+  String widthMeasurement(int value);
+
+  /// No description provided for @baseMeasurement.
+  ///
+  /// In ru, this message translates to:
+  /// **'Основание — {value}'**
+  String baseMeasurement(int value);
+
+  /// No description provided for @heightMeasurement.
+  ///
+  /// In ru, this message translates to:
+  /// **'Высота — {value}'**
+  String heightMeasurement(int value);
+
+  /// No description provided for @legMeasurement.
+  ///
+  /// In ru, this message translates to:
+  /// **'Катет — {value}'**
+  String legMeasurement(int value);
+
+  /// No description provided for @diagonalMeasurement.
+  ///
+  /// In ru, this message translates to:
+  /// **'Диагональ — {value}'**
+  String diagonalMeasurement(int value);
 }
 
 class _AppStringsDelegate extends LocalizationsDelegate<AppStrings> {
