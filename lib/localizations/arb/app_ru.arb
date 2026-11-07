@@ -5,8 +5,8 @@
   "homeSubtitle": "Каркас приложения готов",
   "homeMathSquareButton": "Площадь фигур",
   "mathSquareTitle": "Площадь фигуры",
-  "mathSquareShowAnswer": "Показать ответ",
-  "mathSquareNextQuestion": "Следующий вопрос",
+  "quizShowAnswer": "Показать ответ",
+  "quizNextQuestion": "Следующий вопрос",
   "mathSquareAnswer": "Ответ: {answer}",
   "@mathSquareAnswer": {
     "placeholders": {
@@ -77,5 +77,78 @@
         "type": "int"
       }
     }
-  }
+  },
+  "homeMathEquationButton": "Уравнения",
+  "mathEquationTitle": "Уравнения",
+  "linearEquationQuestion": "Решите уравнение",
+  "discriminantQuestion": "Найдите дискриминант",
+  "rootCountQuestion": "Сколько корней у уравнения?",
+  "rootsQuestion": "Найдите корни уравнения",
+  "formulaByGraphQuestion": "Какая формула задаёт этот график?",
+  "graphByFormulaQuestion": "Какой график у этой функции?",
+  "linearEquationAnswer": "Ответ: x = {root}",
+  "@linearEquationAnswer": {
+    "placeholders": {
+      "root": {
+        "type": "String"
+      }
+    }
+  },
+  "discriminantAnswer": "Ответ: D = {value}",
+  "@discriminantAnswer": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "discriminantHint": "D = {value}",
+  "@discriminantHint": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "rootCountAnswer": "{count, plural, =0{Ответ: корней нет} =1{Ответ: 1 корень} few{Ответ: {count} корня} other{Ответ: {count} корней}}",
+  "@rootCountAnswer": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rootsAnswer": "Ответ: {first}; {second}",
+  "@rootsAnswer": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      }
+    }
+  },
+  "choiceAnswer": "Ответ: {choice}",
+  "@choiceAnswer": {
+    "placeholders": {
+      "choice": {
+        "type": "String"
+      }
+    }
+  },
+  "graphAnswer": "Ответ: график {number}",
+  "@graphAnswer": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "optionLetterA": "А",
+  "optionLetterB": "Б",
+  "optionLetterC": "В",
+  "optionLetterD": "Г",
+  "graphAxisX": "x",
+  "graphAxisY": "y"
 }

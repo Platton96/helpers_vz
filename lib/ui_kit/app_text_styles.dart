@@ -45,5 +45,42 @@ class AppTextStyles {
         color: AppColors.textPrimary,
       );
 
+  static TextStyle get equation => GoogleFonts.unbounded(
+        fontSize: 40,
+        fontWeight: FontWeight.w600,
+        color: AppColors.textPrimary,
+      );
+
+  static TextStyle get formulaOption => GoogleFonts.golosText(
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        color: AppColors.textPrimary,
+      );
+
+  static TextStyle get optionLetter => GoogleFonts.unbounded(
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+        color: AppColors.accent,
+      );
+
+  static TextStyle get graphLabel => GoogleFonts.golosText(
+        fontSize: 13,
+        fontWeight: FontWeight.w700,
+        color: AppColors.graphMark,
+      );
+
+  static TextStyle get graphAxis => GoogleFonts.golosText(
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+        fontStyle: FontStyle.italic,
+        color: AppColors.graphAxis,
+      );
+
+  static TextStyle get graphNumber => GoogleFonts.unbounded(
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+        color: AppColors.textPrimary,
+      );
+
   const AppTextStyles._();
 }

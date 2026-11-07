@@ -9,6 +9,10 @@ class AppColors {
   static const Color textSecondary = Color(0xFF9AA0AC);
   static const Color figureFill = Color(0x334F8CFF);
   static const Color figureLabelBackground = Color(0xE614161C);
+  static const Color outline = Color(0xFF2E3340);
+  static const Color graphGrid = Color(0x1F9AA0AC);
+  static const Color graphAxis = Color(0xFF9AA0AC);
+  static const Color graphMark = Color(0xFFFFB547);
 
   const AppColors._();
 }

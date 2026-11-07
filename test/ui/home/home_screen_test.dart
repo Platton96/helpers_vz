@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:helpers_vz/ui/home/home_screen.dart';
+import 'package:helpers_vz/ui/math_equation/math_equation_screen.dart';
 import 'package:helpers_vz/ui/math_square/math_square_screen.dart';
 
 import '../../helpers/test_app.dart';
@@ -30,5 +31,14 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byType(MathSquareScreen), findsOneWidget);
+  });
+
+  testWidgets('opens the equation screen from the home button', (tester) async {
+    await pumpTestApp(tester, const HomeScreen(), size: phoneSize);
+
+    await tester.tap(find.text(russianStrings.homeMathEquationButton));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(MathEquationScreen), findsOneWidget);
   });
 }

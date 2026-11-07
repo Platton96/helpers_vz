@@ -38,11 +38,11 @@ void main() {
       final second = repository.nextQuestion();
       await pumpTestApp(tester, const MathSquareScreen(), size: size);
 
-      await tester.tap(find.text(russianStrings.mathSquareShowAnswer));
+      await tester.tap(find.text(russianStrings.quizShowAnswer));
       await tester.pumpAndSettle();
       expect(find.text(russianStrings.mathSquareAnswer(first.answer)), findsOneWidget);
 
-      await tester.tap(find.text(russianStrings.mathSquareNextQuestion));
+      await tester.tap(find.text(russianStrings.quizNextQuestion));
       await tester.pumpAndSettle();
       expect(find.text(russianStrings.mathSquareAnswer(first.answer)), findsNothing);
       expect(find.text(russianStrings.areaQuestion(second.figure)), findsOneWidget);

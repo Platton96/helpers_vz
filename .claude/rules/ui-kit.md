@@ -13,6 +13,9 @@ widget — the piece probably exists.
 | Color | `AppColors.*` |
 | Text style | `AppTextStyles.*` (`google_fonts`) |
 | App theme | `AppTheme.dark` |
+| Bordered quiz card | `QuizCard` |
+| Show answer / next question buttons | `QuizActions` |
+| Dashed lines, label chips, text on a canvas | `CanvasDrawing` extension |
 
 Add a row to this table whenever a new shared widget lands in `ui_kit/`.
 

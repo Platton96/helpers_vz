@@ -128,17 +128,17 @@ abstract class AppStrings {
   /// **'Площадь фигуры'**
   String get mathSquareTitle;
 
-  /// No description provided for @mathSquareShowAnswer.
+  /// No description provided for @quizShowAnswer.
   ///
   /// In ru, this message translates to:
   /// **'Показать ответ'**
-  String get mathSquareShowAnswer;
+  String get quizShowAnswer;
 
-  /// No description provided for @mathSquareNextQuestion.
+  /// No description provided for @quizNextQuestion.
   ///
   /// In ru, this message translates to:
   /// **'Следующий вопрос'**
-  String get mathSquareNextQuestion;
+  String get quizNextQuestion;
 
   /// No description provided for @mathSquareAnswer.
   ///
@@ -229,6 +229,132 @@ abstract class AppStrings {
   /// In ru, this message translates to:
   /// **'Диагональ — {value}'**
   String diagonalMeasurement(int value);
+
+  /// No description provided for @homeMathEquationButton.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уравнения'**
+  String get homeMathEquationButton;
+
+  /// No description provided for @mathEquationTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уравнения'**
+  String get mathEquationTitle;
+
+  /// No description provided for @linearEquationQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Решите уравнение'**
+  String get linearEquationQuestion;
+
+  /// No description provided for @discriminantQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите дискриминант'**
+  String get discriminantQuestion;
+
+  /// No description provided for @rootCountQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сколько корней у уравнения?'**
+  String get rootCountQuestion;
+
+  /// No description provided for @rootsQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найдите корни уравнения'**
+  String get rootsQuestion;
+
+  /// No description provided for @formulaByGraphQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Какая формула задаёт этот график?'**
+  String get formulaByGraphQuestion;
+
+  /// No description provided for @graphByFormulaQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Какой график у этой функции?'**
+  String get graphByFormulaQuestion;
+
+  /// No description provided for @linearEquationAnswer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ответ: x = {root}'**
+  String linearEquationAnswer(String root);
+
+  /// No description provided for @discriminantAnswer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ответ: D = {value}'**
+  String discriminantAnswer(String value);
+
+  /// No description provided for @discriminantHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'D = {value}'**
+  String discriminantHint(String value);
+
+  /// No description provided for @rootCountAnswer.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, =0{Ответ: корней нет} =1{Ответ: 1 корень} few{Ответ: {count} корня} other{Ответ: {count} корней}}'**
+  String rootCountAnswer(int count);
+
+  /// No description provided for @rootsAnswer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ответ: {first}; {second}'**
+  String rootsAnswer(String first, String second);
+
+  /// No description provided for @choiceAnswer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ответ: {choice}'**
+  String choiceAnswer(String choice);
+
+  /// No description provided for @graphAnswer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ответ: график {number}'**
+  String graphAnswer(int number);
+
+  /// No description provided for @optionLetterA.
+  ///
+  /// In ru, this message translates to:
+  /// **'А'**
+  String get optionLetterA;
+
+  /// No description provided for @optionLetterB.
+  ///
+  /// In ru, this message translates to:
+  /// **'Б'**
+  String get optionLetterB;
+
+  /// No description provided for @optionLetterC.
+  ///
+  /// In ru, this message translates to:
+  /// **'В'**
+  String get optionLetterC;
+
+  /// No description provided for @optionLetterD.
+  ///
+  /// In ru, this message translates to:
+  /// **'Г'**
+  String get optionLetterD;
+
+  /// No description provided for @graphAxisX.
+  ///
+  /// In ru, this message translates to:
+  /// **'x'**
+  String get graphAxisX;
+
+  /// No description provided for @graphAxisY.
+  ///
+  /// In ru, this message translates to:
+  /// **'y'**
+  String get graphAxisY;
 }
 
 class _AppStringsDelegate extends LocalizationsDelegate<AppStrings> {

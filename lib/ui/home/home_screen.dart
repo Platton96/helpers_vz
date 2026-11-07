@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helpers_vz/localizations/generated/app_strings.dart';
+import 'package:helpers_vz/ui/math_equation/math_equation_screen.dart';
 import 'package:helpers_vz/ui/math_square/math_square_screen.dart';
 import 'package:helpers_vz/ui_kit/app_text_styles.dart';
 
@@ -23,6 +24,12 @@ class HomeScreen extends StatelessWidget {
                 MaterialPageRoute<void>(builder: (context) => const MathSquareScreen()),
               ),
               child: Text(strings.homeMathSquareButton),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(builder: (context) => const MathEquationScreen()),
+              ),
+              child: Text(strings.homeMathEquationButton),
             ),
           ],
         ),

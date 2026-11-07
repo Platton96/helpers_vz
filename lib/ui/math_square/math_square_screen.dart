@@ -9,8 +9,9 @@ import 'package:helpers_vz/ui/math_square/bloc/math_square_event.dart';
 import 'package:helpers_vz/ui/math_square/bloc/math_square_state.dart';
 import 'package:helpers_vz/ui/math_square/widgets/area_figure_view.dart';
 import 'package:helpers_vz/ui_kit/app_breakpoints.dart';
-import 'package:helpers_vz/ui_kit/app_colors.dart';
 import 'package:helpers_vz/ui_kit/app_text_styles.dart';
+import 'package:helpers_vz/ui_kit/quiz_actions.dart';
+import 'package:helpers_vz/ui_kit/quiz_card.dart';
 
 class MathSquareScreen extends StatelessWidget {
   const MathSquareScreen({super.key});
@@ -47,25 +48,11 @@ class _MathSquareView extends StatelessWidget {
                     Expanded(
                       child: _QuestionCard(question: state.question, isAnswerRevealed: state.isAnswerRevealed),
                     ),
-                    Row(
-                      spacing: 12,
-                      children: [
-                        Expanded(
-                          child: OutlinedButton(
-                            onPressed: state.isAnswerRevealed
-                                ? null
-                                : () => context.read<MathSquareBloc>().add(const MathSquareShowAnswerTappedEvent()),
-                            child: Text(strings.mathSquareShowAnswer, textAlign: .center),
-                          ),
-                        ),
-                        Expanded(
-                          child: FilledButton(
-                            onPressed: () =>
-                                context.read<MathSquareBloc>().add(const MathSquareNextQuestionTappedEvent()),
-                            child: Text(strings.mathSquareNextQuestion, textAlign: .center),
-                          ),
-                        ),
-                      ],
+                    QuizActions(
+                      isAnswerRevealed: state.isAnswerRevealed,
+                      onShowAnswer: () => context.read<MathSquareBloc>().add(const MathSquareShowAnswerTappedEvent()),
+                      onNextQuestion: () =>
+                          context.read<MathSquareBloc>().add(const MathSquareNextQuestionTappedEvent()),
                     ),
                   ],
                 ),
@@ -79,9 +66,6 @@ class _MathSquareView extends StatelessWidget {
 }
 
 class _QuestionCard extends StatelessWidget {
-  static const double _borderWidth = 2;
-  static const BorderRadius _borderRadius = .all(.circular(20));
-
   final AreaQuestion question;
   final bool isAnswerRevealed;
 
@@ -92,32 +76,24 @@ class _QuestionCard extends StatelessWidget {
     final figure = AreaFigureView(outline: question.outline, measurements: question.measurements);
     final text = _QuestionText(question: question, isAnswerRevealed: isAnswerRevealed);
 
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: AppColors.surface,
-        borderRadius: _borderRadius,
-        border: .all(color: AppColors.accent, width: _borderWidth),
-      ),
-      child: Padding(
-        padding: const .all(20),
-        child: LayoutBuilder(
-          builder: (context, constraints) => AppBreakpoints.isWide(constraints.maxWidth)
-              ? Row(
-                  spacing: 24,
-                  children: [
-                    Expanded(child: figure),
-                    Expanded(child: text),
-                  ],
-                )
-              : Column(
-                  crossAxisAlignment: .stretch,
-                  spacing: 16,
-                  children: [
-                    Expanded(child: figure),
-                    text,
-                  ],
-                ),
-        ),
+    return QuizCard(
+      child: LayoutBuilder(
+        builder: (context, constraints) => AppBreakpoints.isWide(constraints.maxWidth)
+            ? Row(
+                spacing: 24,
+                children: [
+                  Expanded(child: figure),
+                  Expanded(child: text),
+                ],
+              )
+            : Column(
+                crossAxisAlignment: .stretch,
+                spacing: 16,
+                children: [
+                  Expanded(child: figure),
+                  text,
+                ],
+              ),
       ),
     );
   }

@@ -22,4 +22,11 @@ extension LocalizedEnums on AppStrings {
         .leg => legMeasurement(value),
         .diagonal => diagonalMeasurement(value),
       };
+
+  String optionLetter(int index) => switch (index) {
+        0 => optionLetterA,
+        1 => optionLetterB,
+        2 => optionLetterC,
+        _ => optionLetterD,
+      };
 }

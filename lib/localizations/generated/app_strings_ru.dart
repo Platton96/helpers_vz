@@ -24,10 +24,10 @@ class AppStringsRu extends AppStrings {
   String get mathSquareTitle => 'Площадь фигуры';
 
   @override
-  String get mathSquareShowAnswer => 'Показать ответ';
+  String get quizShowAnswer => 'Показать ответ';
 
   @override
-  String get mathSquareNextQuestion => 'Следующий вопрос';
+  String get quizNextQuestion => 'Следующий вопрос';
 
   @override
   String mathSquareAnswer(int answer) {
@@ -90,4 +90,89 @@ class AppStringsRu extends AppStrings {
   String diagonalMeasurement(int value) {
     return 'Диагональ — $value';
   }
+
+  @override
+  String get homeMathEquationButton => 'Уравнения';
+
+  @override
+  String get mathEquationTitle => 'Уравнения';
+
+  @override
+  String get linearEquationQuestion => 'Решите уравнение';
+
+  @override
+  String get discriminantQuestion => 'Найдите дискриминант';
+
+  @override
+  String get rootCountQuestion => 'Сколько корней у уравнения?';
+
+  @override
+  String get rootsQuestion => 'Найдите корни уравнения';
+
+  @override
+  String get formulaByGraphQuestion => 'Какая формула задаёт этот график?';
+
+  @override
+  String get graphByFormulaQuestion => 'Какой график у этой функции?';
+
+  @override
+  String linearEquationAnswer(String root) {
+    return 'Ответ: x = $root';
+  }
+
+  @override
+  String discriminantAnswer(String value) {
+    return 'Ответ: D = $value';
+  }
+
+  @override
+  String discriminantHint(String value) {
+    return 'D = $value';
+  }
+
+  @override
+  String rootCountAnswer(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Ответ: $count корней',
+      few: 'Ответ: $count корня',
+      one: 'Ответ: 1 корень',
+      zero: 'Ответ: корней нет',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rootsAnswer(String first, String second) {
+    return 'Ответ: $first; $second';
+  }
+
+  @override
+  String choiceAnswer(String choice) {
+    return 'Ответ: $choice';
+  }
+
+  @override
+  String graphAnswer(int number) {
+    return 'Ответ: график $number';
+  }
+
+  @override
+  String get optionLetterA => 'А';
+
+  @override
+  String get optionLetterB => 'Б';
+
+  @override
+  String get optionLetterC => 'В';
+
+  @override
+  String get optionLetterD => 'Г';
+
+  @override
+  String get graphAxisX => 'x';
+
+  @override
+  String get graphAxisY => 'y';
 }
